@@ -19,10 +19,10 @@ def say_hi():
 def say_hello(name):
     return {"Hello": name}
 
-# @app.get("/country_trendline/{country}")
-# def calculate_country_trendline(country: str):
-#     slope, r_squared = country_trendline(country)
-#     return {"slope": slope, "r_squared": r_squared}
+@app.get("/country_trendline/{country}")
+def calculate_country_trendline(country: str):
+    slope, r_squared = country_trendline(country)
+    return {"slope": slope, "r_squared": r_squared}
 
 
 @app.post("fit_trendline/")
